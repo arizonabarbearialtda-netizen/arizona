@@ -1,0 +1,639 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#11100f" />
+<meta name="description" content="Arizona Barbershop — confira os serviços e valores e fale com a barbearia pelo WhatsApp ou Instagram." data-i18n-content="description" />
+<title data-i18n="title">Arizona Barbershop | Seu estilo, sua marca</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+:root{color-scheme:dark;--ink:#11100f;--ink-soft:#191715;--panel:#201e1b;--cream:#f4efe7;--paper:#d7d1c7;--muted:#aaa39a;--orange:#f04b1d;--orange-bright:#ff5a28;--line:rgba(244,239,231,.17);--green-wa:#25d366;--green-wa-hover:#1ebe5a;--blue-ig:#3b82f6;--blue-ig-bright:#60a5fa;--blue-ig-hover:#2563eb;--condensed:'Barlow Condensed','Arial Narrow',Impact,sans-serif;--sans:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0;background:var(--ink);color:var(--cream);font-family:var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+.site-shell{max-width:1600px;margin:0 auto;overflow:hidden;background:var(--ink)}
+.site-header{height:86px;padding:0 clamp(22px,6.2vw,96px);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(244,239,231,.1);background:rgba(17,16,15,.94);position:sticky;top:0;z-index:20;backdrop-filter:blur(14px);gap:clamp(10px,1.8vw,24px)}
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.brand-name{display:flex;flex-direction:column;line-height:.9;gap:5px}
+.brand-name strong{font:800 23px/.9 var(--sans);letter-spacing:.04em}
+.brand-name small{font:600 8px/1 var(--sans);letter-spacing:.24em;color:var(--muted)}
+.main-nav{display:flex;align-items:center;gap:clamp(24px,4vw,56px);margin-left:auto;margin-right:clamp(14px,2vw,34px)}
+.main-nav a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:var(--paper);transition:color .2s ease}
+.main-nav a:hover,.text-link:hover{color:var(--orange-bright)}
+.header-cta{min-height:43px;padding:0 16px 0 19px;display:inline-flex;gap:20px;align-items:center;border:1px solid rgba(37,211,102,.4);color:var(--green-wa);text-decoration:none;text-transform:uppercase;letter-spacing:.08em;font-size:10px;font-weight:700;transition:.2s ease}
+.header-cta:hover{color:#fff;border-color:var(--green-wa);background:var(--green-wa)}
+.header-cta svg{width:17px;fill:none;stroke:currentColor;stroke-width:1.5}
+.hero{min-height:560px;padding:82px clamp(22px,9.7vw,156px) 54px;display:grid;grid-template-columns:1fr;align-items:center;position:relative;isolation:isolate;background:radial-gradient(ellipse at 79% 46%,rgba(240,75,29,.11),transparent 36%),linear-gradient(135deg,#11100f 0%,#151310 57%,#100f0e 100%)}
+.hero::before{content:'';position:absolute;inset:0;z-index:-1;opacity:.16;background-image:repeating-linear-gradient(132deg,transparent 0 45px,rgba(244,239,231,.045) 46px 47px,transparent 48px 96px);mask-image:linear-gradient(90deg,transparent 20%,black 100%)}
+.hero-copy{position:relative;z-index:2;max-width:860px}
+.eyebrow{display:flex;align-items:center;gap:10px;margin:0 0 21px;color:var(--orange-bright);font:700 10px/1 var(--sans);letter-spacing:.22em;text-transform:uppercase}
+.eyebrow-mark{display:inline-block;width:7px;height:7px;background:var(--orange);transform:rotate(45deg)}
+.eyebrow-line{width:34px;height:1px;background:rgba(240,75,29,.55)}
+h1,h2,p{margin-top:0}
+.hero h1{margin:0;font:800 clamp(76px,10.7vw,152px)/.79 var(--condensed);letter-spacing:-.025em;text-transform:uppercase}
+.hero h1 em,.section-heading h2 em,.contact-copy h2 em{color:var(--orange);font-style:normal}
+.hero-description{max-width:410px;margin:27px 0 25px;color:#c6c0b7;font-size:14px;line-height:1.75}
+.hero-actions,.contact-actions{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
+.button{min-height:52px;padding:0 18px;display:inline-flex;gap:11px;align-items:center;justify-content:center;text-decoration:none;text-transform:uppercase;font-size:10px;font-weight:700;letter-spacing:.1em;transition:background .22s ease,border-color .22s ease,transform .22s ease}
+.button:hover{transform:translateY(-2px)}
+.button-primary{background:var(--green-wa);color:#fff;border:1px solid var(--green-wa)}
+.button-primary:hover{background:var(--green-wa-hover);border-color:var(--green-wa-hover)}
+.button-quiet{border:1px solid var(--blue-ig);background:var(--blue-ig);color:#fff}
+.button-quiet:hover{border-color:var(--blue-ig-hover);background:var(--blue-ig-hover)}
+.wa-icon{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.wa-icon path:nth-child(2){fill:currentColor;stroke:none}
+.ig-icon{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8}
+.ig-dot{fill:currentColor;stroke:none}
+.button-arrow{margin-left:4px;font-size:15px}
+.note-star{color:var(--orange);font-size:16px}
+.intro-strip{min-height:118px;padding:25px clamp(22px,9.7vw,156px);display:grid;grid-template-columns:62px 1fr auto;align-items:center;gap:20px;background:var(--orange);color:#fff8f1}
+.strip-number{align-self:start;padding-top:6px;font:700 11px/1 var(--condensed);letter-spacing:.15em;opacity:.76}
+.intro-strip p{margin:0;font:500 14px/1.5 var(--sans)}
+.intro-strip strong{font-weight:700}
+.text-link{display:flex;gap:13px;align-items:center;text-decoration:none;text-transform:uppercase;font-size:9px;font-weight:700;letter-spacing:.14em;transition:color .2s ease}
+.text-link:hover{color:#23110b}
+.text-link span{font-size:17px}
+.services-section{padding:112px clamp(22px,9.7vw,156px) 125px}
+.section-heading{display:flex;justify-content:space-between;align-items:end;gap:32px;margin-bottom:47px}
+.section-heading .eyebrow{margin-bottom:15px}
+.section-heading h2,.contact-copy h2{margin:0;font:700 clamp(54px,7vw,93px)/.83 var(--condensed);letter-spacing:-.015em;text-transform:uppercase}
+.price-layout{display:flex;flex-direction:column;gap:clamp(34px,5vw,64px)}
+.service-list{min-width:0;width:100%}
+.service-row{min-height:59px;display:grid;grid-template-columns:32px minmax(110px,max-content) minmax(20px,1fr) max-content;gap:10px;align-items:center;border-bottom:1px solid var(--line)}
+.service-index{color:var(--orange);font:600 10px/1 var(--condensed);letter-spacing:.06em}
+.service-name{color:var(--cream);font:500 clamp(16px,1.9vw,21px)/1.2 var(--condensed);letter-spacing:.015em}
+.service-dots{height:1px;align-self:center;background-image:radial-gradient(circle,rgba(244,239,231,.33) 1px,transparent 1.3px);background-size:7px 1px;background-repeat:repeat-x}
+.service-price{color:var(--cream);font:600 16px/1 var(--condensed);white-space:nowrap}
+.price-note{display:flex;align-items:center;gap:8px;margin:17px 0 0;color:#8c857b;font-size:10px;line-height:1.6}
+.poster-card{padding:14px;background:#1b1917;border:1px solid rgba(244,239,231,.14);width:min(100%,560px);margin:0 auto}
+.poster-card-heading{display:flex;gap:9px;align-items:center;margin-bottom:13px;color:#a9a198;font:700 8px/1 var(--sans);letter-spacing:.14em}
+.poster-card-line{flex:1;height:1px;background:rgba(244,239,231,.19)}
+.poster-link{display:block;position:relative;overflow:hidden;background:#080808}
+.poster-link img{display:block;width:100%;height:auto;transition:transform .35s ease}
+.poster-link:hover img{transform:scale(1.025)}
+.poster-open{position:absolute;right:10px;bottom:10px;padding:8px 10px;background:rgba(15,14,13,.85);color:var(--cream);font-size:8px;letter-spacing:.1em;text-transform:uppercase;opacity:.9}
+.poster-open span{color:var(--orange);margin-left:5px}
+.poster-caption{margin:11px 0 2px;color:#a9a198;font-size:10px;line-height:1.5}
+.contact-section{padding:80px clamp(22px,9.7vw,156px);display:grid;grid-template-columns:minmax(0,1fr) minmax(210px,.65fr);align-items:center;gap:clamp(22px,4vw,62px);background:#1c1917;border-top:1px solid rgba(244,239,231,.08);border-bottom:1px solid rgba(244,239,231,.08);position:relative;overflow:hidden}
+.contact-section::after{content:'A';position:absolute;right:-10px;bottom:-135px;color:rgba(244,239,231,.025);font:900 450px/.8 var(--condensed);pointer-events:none}
+.contact-copy{position:relative;z-index:1}
+.contact-copy .eyebrow{margin-bottom:15px}
+.contact-copy h2{font-size:clamp(54px,6vw,78px)}
+.contact-copy>p:not(.eyebrow){max-width:480px;margin:19px 0 19px;color:#aaa39a;font-size:11px;line-height:1.8}
+.contact-actions .button{min-height:45px;padding-inline:13px;font-size:9px}
+.button-outline{border:1px solid var(--blue-ig);background:var(--blue-ig);color:#fff}
+.button-outline:hover{border-color:var(--blue-ig-hover);background:var(--blue-ig-hover)}
+.contact-side{position:relative;z-index:1;padding-left:25px;border-left:1px solid rgba(244,239,231,.18);display:flex;flex-direction:column;align-items:flex-start}
+.side-label{margin-bottom:16px;color:#968e84;font-size:8px;font-weight:700;letter-spacing:.19em}
+.phone-link,.instagram-link{text-decoration:none;font:500 clamp(17px,2.1vw,22px)/1.3 var(--condensed)}
+.phone-link span{color:var(--green-wa);font:14px/1 var(--sans)}
+.phone-link:hover{color:var(--green-wa-hover)}
+.side-separator{width:38px;height:1px;margin:13px 0;background:var(--orange)}
+.instagram-link{color:var(--blue-ig);font-size:16px}
+.instagram-link span{color:var(--blue-ig);font:14px/1 var(--sans)}
+.instagram-link:hover{color:var(--blue-ig-hover)}
+.site-footer{min-height:91px;padding:18px clamp(22px,6.2vw,96px);display:flex;justify-content:space-between;align-items:center;gap:20px}
+.footer-brand .brand-name strong{font-size:19px}
+.footer-brand .brand-name small{font-size:7px}
+.site-footer>p{margin:0;color:#817a71;font:500 10px/1 var(--condensed);letter-spacing:.1em;text-transform:uppercase}
+.footer-copy{color:#817a71;font-size:9px}
+.mobile-cta{display:none}
+.site-header{gap:clamp(10px,1.8vw,24px)}
+.header-brand-group{display:flex;align-items:center;gap:clamp(8px,1.4vw,18px);min-width:0}
+.header-actions{display:flex;align-items:center;gap:12px}
+.accessibility-toggle{min-height:52px;padding:8px 14px;display:inline-flex;align-items:center;gap:8px;border:2px solid var(--orange);border-radius:2px;background:var(--orange);color:#111;font:800 14px/1.2 var(--sans);letter-spacing:.025em;cursor:pointer;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.accessibility-toggle:hover,.accessibility-toggle[aria-pressed="true"]{border-color:var(--orange-bright);background:var(--orange-bright);color:#111}
+.accessibility-glyph{width:31px;height:31px;display:grid;place-items:center;border:2px solid #111;border-radius:50%;background:#111;color:#fff;font:800 14px/1 var(--sans);letter-spacing:-.08em}
+.accessibility-label{white-space:nowrap}
+:focus-visible{outline:3px solid #ffe05b;outline-offset:4px}
+button,select{font-family:inherit}
+body.accessibility-mode{color-scheme:light;background:#000;color:#fff;line-height:1.75;letter-spacing:.015em;--ink:#000;--ink-soft:#080808;--panel:#080808;--cream:#fff;--paper:#fff;--muted:#f0f0f0;--orange:#ffe34d;--orange-bright:#fff38a;--line:rgba(255,255,255,.58)}
+body.accessibility-mode .site-shell,body.accessibility-mode .site-header,body.accessibility-mode .hero,body.accessibility-mode .services-section,body.accessibility-mode .contact-section,body.accessibility-mode .site-footer,body.accessibility-mode .poster-card{background-color:#000;color:#fff}
+body.accessibility-mode .site-header,body.accessibility-mode .contact-section,body.accessibility-mode .poster-card{border-color:#fff}
+body.accessibility-mode .hero{background-image:none}
+body.accessibility-mode .hero::before{display:none}
+body.accessibility-mode .intro-strip{background:#ffe34d;color:#000}
+body.accessibility-mode .intro-strip p,body.accessibility-mode .intro-strip a{color:#000}
+body.accessibility-mode .hero h1 em,body.accessibility-mode .section-heading h2 em,body.accessibility-mode .contact-copy h2 em,body.accessibility-mode .eyebrow,body.accessibility-mode .service-index,body.accessibility-mode .poster-open span{color:#ffe34d}
+body.accessibility-mode .hero-description,body.accessibility-mode .contact-copy>p:not(.eyebrow),body.accessibility-mode .price-note,body.accessibility-mode .poster-caption,body.accessibility-mode .side-label,body.accessibility-mode .site-footer>p,body.accessibility-mode .footer-copy{color:#fff}
+body.accessibility-mode .button-primary,body.accessibility-mode .mobile-cta-wa{background:#ffe34d;border-color:#ffe34d;color:#000}
+body.accessibility-mode .button-primary:hover,body.accessibility-mode .mobile-cta-wa:hover{background:#fff;border-color:#fff;color:#000}
+body.accessibility-mode .button-quiet,body.accessibility-mode .button-outline{background:#000;border-color:#ffe34d;color:#ffe34d}
+body.accessibility-mode .button-quiet:hover,body.accessibility-mode .button-outline:hover{background:#ffe34d;color:#000}
+body.accessibility-mode .header-cta,body.accessibility-mode .mobile-cta-ig{border-color:#fff;color:#fff}
+body.accessibility-mode .accessibility-toggle[aria-pressed="true"]{background:#ffe34d;color:#000;border-color:#ffe34d}
+body.accessibility-mode .poster-link{border:2px solid #fff}
+body.accessibility-mode a:not(.button):not(.brand):not(.header-cta){text-decoration:underline;text-decoration-thickness:.1em;text-underline-offset:.18em}
+body.accessibility-mode .button,body.accessibility-mode .header-cta,body.accessibility-mode .main-nav a,body.accessibility-mode .accessibility-toggle{font-size:15px}
+body.accessibility-mode .eyebrow{font-size:14px;letter-spacing:.1em}
+body.accessibility-mode .hero-description{max-width:650px;font-size:20px;line-height:1.8}
+body.accessibility-mode .intro-strip p{font-size:18px;line-height:1.8}
+body.accessibility-mode .text-link{font-size:14px}
+body.accessibility-mode .service-row{min-height:72px}
+body.accessibility-mode .service-index{font-size:14px}
+body.accessibility-mode .service-name{font-size:23px;line-height:1.35}
+body.accessibility-mode .service-price{font-size:20px}
+body.accessibility-mode .price-note,body.accessibility-mode .poster-caption{font-size:14px;line-height:1.8}
+body.accessibility-mode .poster-card-heading{font-size:12px}
+body.accessibility-mode .poster-open{font-size:12px}
+body.accessibility-mode .contact-copy>p:not(.eyebrow){font-size:17px;line-height:1.8}
+body.accessibility-mode .side-label{font-size:13px}
+body.accessibility-mode .instagram-link{font-size:20px}
+body.accessibility-mode .footer-copy,body.accessibility-mode .site-footer>p{font-size:13px}
+body.accessibility-mode .mobile-cta a{min-height:54px;font-size:14px}
+body.accessibility-mode :focus-visible{outline:4px solid #ffe34d;outline-offset:4px}
+body.accessibility-mode *,body.accessibility-mode *::before,body.accessibility-mode *::after{scroll-behavior:auto!important;animation:none!important;transition:none!important}
+.language-switcher{position:relative;display:inline-flex}
+.language-button{min-height:52px;padding:0 14px;display:inline-flex;align-items:center;justify-content:center;gap:9px;border:2px solid var(--cream);border-radius:2px;background:#171513;color:var(--cream);font:800 14px/1.2 var(--sans);cursor:pointer}
+.language-button:hover,.language-button[aria-expanded="true"]{border-color:var(--orange);background:#211b18}
+.language-flag{display:inline-block;font-size:22px;line-height:1}
+.language-current-name{white-space:nowrap}
+.language-button svg{width:16px;height:16px;flex:0 0 auto;fill:none;stroke:currentColor;stroke-width:1.8}
+.language-menu{position:absolute;top:calc(100% + 8px);left:0;z-index:60;display:grid;gap:3px;min-width:245px;max-width:min(280px,calc(100vw - 32px));padding:7px;border:1px solid rgba(244,239,231,.45);background:#171513;box-shadow:0 14px 32px rgba(0,0,0,.55)}
+.language-menu[hidden]{display:none}
+.language-option{width:100%;min-height:48px;padding:7px 9px;display:flex;align-items:center;gap:10px;border:1px solid transparent;background:transparent;color:var(--cream);text-align:left;font:600 14px/1.35 var(--sans);cursor:pointer}
+.language-option:hover,.language-option:focus-visible,.language-option[aria-pressed="true"]{border-color:var(--orange);background:rgba(240,75,29,.14)}
+.language-option .language-flag{width:24px;text-align:center}
+body.accessibility-mode .language-button,body.accessibility-mode .language-menu{border-color:#fff;background:#000;color:#fff}
+body.accessibility-mode .language-button[aria-expanded="true"],body.accessibility-mode .language-option[aria-pressed="true"],body.accessibility-mode .language-option:hover,body.accessibility-mode .language-option:focus-visible{border-color:#ffe34d;background:#ffe34d;color:#000}
+[class*="manus"][class*="badge"],[id*="manus"][id*="badge"],[class*="made-with-manus"]{display:none!important}
+@media (min-width:1440px){.hero{min-height:600px}}
+@media (max-width:900px){.site-header{padding-inline:18px}.main-nav{margin-right:12px;gap:16px}.hero{padding-inline:7vw}.services-section,.contact-section{padding-inline:7vw}.service-row{grid-template-columns:25px minmax(105px,max-content) minmax(12px,1fr) max-content;gap:7px}.service-name{font-size:17px}.service-price{font-size:14px}.contact-section{grid-template-columns:minmax(0,1fr) minmax(180px,.7fr);gap:25px}.contact-copy h2{font-size:58px}.contact-actions{gap:8px}.contact-actions .button{font-size:8px;padding-inline:10px}.contact-side{padding-left:18px}}
+@media (min-width:651px) and (max-width:1000px){.main-nav{display:none}.site-header{padding-inline:18px}}
+@media (max-width:650px){html{scroll-padding-top:132px}body{padding-bottom:62px}.site-header{height:auto;min-height:0;padding:12px 14px;display:flex;flex-direction:column;align-items:stretch;gap:10px}.header-brand-group{width:100%;justify-content:space-between;gap:8px}.brand{gap:6px}.brand-name strong{font-size:18px;letter-spacing:.03em}.brand-name small{font-size:7px;letter-spacing:.2em}.accessibility-toggle{width:auto;min-height:52px;padding:7px 11px;gap:8px;font-size:13px}.accessibility-glyph{width:29px;height:29px;flex:0 0 auto}.header-actions{width:100%;justify-content:flex-start}.header-actions .header-cta{display:none}.language-button{min-height:50px;padding-inline:12px;font-size:13px}.language-menu{min-width:245px;max-width:calc(100vw - 28px)}.main-nav{display:none}.hero{min-height:auto;padding:64px 22px 27px;grid-template-columns:1fr}.hero h1{font-size:clamp(77px,20vw,112px)}.eyebrow{margin-bottom:17px;font-size:9px}.hero-description{max-width:345px;margin:21px 0 20px;font-size:12px}.hero-actions{align-items:stretch;gap:8px}.button{min-height:48px;padding-inline:12px;font-size:8px;gap:7px}.button-quiet{flex:1}.button-primary{flex:1.2}.intro-strip{min-height:96px;padding:19px 22px;grid-template-columns:31px 1fr;gap:10px}.intro-strip p{font-size:11px}.text-link{grid-column:2;font-size:8px;margin-top:-6px}.strip-number{font-size:9px}.services-section{padding:70px 20px 77px}.section-heading{display:block;margin-bottom:29px}.section-heading h2{font-size:63px}.service-list{width:100%}.service-row{min-height:51px;grid-template-columns:22px minmax(95px,max-content) minmax(8px,1fr) max-content;gap:6px}.service-index{font-size:9px}.service-name{font-size:clamp(15px,4.3vw,18px)}.service-price{font-size:14px}.price-note{font-size:9px}.poster-card{width:100%;padding:12px}.poster-card-heading{font-size:7px}.poster-caption{font-size:9px}.contact-section{padding:60px 22px 43px;grid-template-columns:1fr;gap:18px;align-items:start}.contact-copy .eyebrow{font-size:7px;letter-spacing:.14em;gap:7px;margin-bottom:13px}.contact-copy h2{font-size:clamp(52px,14vw,69px)}.contact-copy>p:not(.eyebrow){margin:15px 0;font-size:10px}.contact-actions{flex-direction:column;align-items:stretch}.contact-actions .button{width:100%;min-height:45px;justify-content:flex-start;padding-inline:13px;font-size:8px}.contact-side{grid-column:1;padding:17px 0 0;border:0;border-top:1px solid rgba(244,239,231,.16);width:100%}.side-label{font-size:7px;margin-bottom:10px}.phone-link{font-size:20px}.instagram-link{font-size:15px}.side-separator{margin:10px 0}.site-footer{padding:20px 22px;min-height:91px;flex-wrap:wrap;gap:10px}.site-footer>p{display:none}.footer-copy{margin-left:auto;font-size:8px}.mobile-cta{position:fixed;z-index:30;bottom:0;left:0;right:0;display:grid;grid-template-columns:1fr 1fr;gap:1px;padding:8px 12px max(8px,env(safe-area-inset-bottom));background:rgba(17,16,15,.95);border-top:1px solid rgba(244,239,231,.17);backdrop-filter:blur(16px)}.mobile-cta a{min-height:43px;display:flex;gap:8px;justify-content:center;align-items:center;text-decoration:none;text-transform:uppercase;font-size:9px;font-weight:700;letter-spacing:.12em}.mobile-cta-wa{background:var(--green-wa);color:white}.mobile-cta-ig{background:var(--blue-ig);color:white;border:1px solid var(--blue-ig)}.mobile-cta .wa-icon,.mobile-cta .ig-icon{width:16px;height:16px}body.accessibility-mode{padding-bottom:86px}}
+@media (max-width:360px){.service-row{grid-template-columns:18px minmax(84px,max-content) minmax(5px,1fr) max-content;gap:5px}.service-name{font-size:14px}.service-price{font-size:13px}.hero-actions{flex-direction:column}.button{width:100%}.header-cta{font-size:7px}.header-cta svg{display:none}.site-header{padding-inline:10px}.brand-name strong{font-size:16px}.accessibility-toggle{padding-inline:8px;font-size:11px}.language-button{padding-inline:9px;font-size:12px}}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+</style>
+</head>
+<body>
+<div class="site-shell">
+<header class="site-header">
+<div class="header-brand-group">
+<a class="brand" href="#inicio" aria-label="Arizona Barbershop — início" data-i18n-aria="brandHomeLabel">
+<span class="brand-name"><strong>ARIZONA</strong><small>BARBEARIA</small></span>
+</a>
+<button class="accessibility-toggle" id="accessibility-toggle" type="button" aria-pressed="false">
+<span class="accessibility-glyph" aria-hidden="true">A+</span>
+<span class="accessibility-label" data-i18n="adaptiveMode">Modo adaptativo</span>
+</button>
+</div>
+<nav class="main-nav" aria-label="Navegação principal" data-i18n-aria="navigationLabel">
+<a href="#servicos" data-i18n="navServices">Serviços</a>
+<a href="#sobre" data-i18n="navAbout">A Arizona</a>
+</nav>
+<div class="header-actions">
+<div class="language-switcher" id="language-switcher">
+<button class="language-button" id="language-button" type="button" aria-expanded="false" aria-controls="language-menu" aria-label="Idioma: Português (Brasil)">
+<span class="language-flag" id="language-current-flag" aria-hidden="true">🇧🇷</span>
+<span class="language-current-name" id="language-current-name">Português (Brasil)</span>
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+</button>
+<div class="language-menu" id="language-menu" role="group" aria-label="Idioma" data-i18n-aria="languageLabel" hidden>
+<button class="language-option" type="button" data-locale="pt-BR" aria-pressed="true"><span class="language-flag" aria-hidden="true">🇧🇷</span><span>Português (Brasil)</span></button>
+<button class="language-option" type="button" data-locale="pt-PT" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇵🇹</span><span>Português (Portugal)</span></button>
+<button class="language-option" type="button" data-locale="en" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇬🇧</span><span>English</span></button>
+<button class="language-option" type="button" data-locale="es" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇪🇸</span><span>Español</span></button>
+<button class="language-option" type="button" data-locale="zh-CN" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇨🇳</span><span>中文（简体）</span></button>
+<button class="language-option" type="button" data-locale="fr" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇫🇷</span><span>Français</span></button>
+<button class="language-option" type="button" data-locale="ru" aria-pressed="false"><span class="language-flag" aria-hidden="true">🇷🇺</span><span>Русский</span></button>
+</div>
+</div>
+<a class="header-cta js-whatsapp" href="https://wa.me/5585982287134" target="_blank" rel="noopener noreferrer" data-whatsapp-message="whatsappInquiry">
+<span data-i18n="scheduleAppointment">Agendar horário</span>
+<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>
+</a>
+</div>
+</header>
+
+<main>
+<section class="hero" id="inicio" aria-labelledby="hero-title">
+<div class="hero-copy">
+<p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span><span data-i18n="heroKicker">Arizona Barbershop</span><span class="eyebrow-line" aria-hidden="true"></span></p>
+<h1 id="hero-title"><span data-i18n="heroTitleFirst">Seu estilo.</span><br /><em data-i18n="heroTitleSecond">Sua marca.</em></h1>
+<p class="hero-description" data-i18n="heroDescription">Corte, barba e cuidado nos detalhes. Encontre o serviço ideal e fale com a Arizona para combinar seu atendimento.</p>
+<div class="hero-actions">
+<a class="button button-primary js-whatsapp" href="https://wa.me/5585982287134" target="_blank" rel="noopener noreferrer" data-whatsapp-message="whatsappInquiry">
+<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.8a8.2 8.2 0 0 1-12.1 7.1L4 20l1.1-3.9a8.2 8.2 0 1 1 15.1-4.3Z"/><path d="M8.5 8.2c.2-.5.4-.5.7-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3.1.4 0 .6l-.5.6c-.2.2-.3.4-.1.6.2.4.8 1.3 1.7 2 .9.8 1.7 1 2 1.1.3.1.5.1.7-.2l.7-.9c.2-.3.4-.3.7-.2l1.7.8c.3.2.5.2.5.4 0 .2-.1 1.1-.7 1.6-.5.5-1.2.7-1.8.7-.5 0-1.3-.2-2.1-.5-.9-.4-2-.9-3.2-2.1-1.3-1.2-2.1-2.7-2.3-3.2-.3-.6-.5-1.4-.5-2 0-.7.3-1.3.6-1.6Z"/></svg>
+<span data-i18n="whatsappCta">Chamar no WhatsApp</span>
+<span class="button-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="button button-quiet" href="https://www.instagram.com/arizona.barbershop" target="_blank" rel="noopener noreferrer">
+<svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle class="ig-dot" cx="17.7" cy="6.7" r="1"/></svg>
+<span data-i18n="instagramHandle">@arizona.barbershop</span>
+</a>
+</div>
+</div>
+</section>
+
+<section class="intro-strip" id="sobre" aria-label="Sobre a Arizona Barbershop" data-i18n-aria="introSectionLabel">
+<span class="strip-number" aria-hidden="true">01 /</span>
+<p><span data-i18n="introFirst">Um bom visual começa no detalhe.</span><br /><strong data-i18n="introSecond">Descubra os serviços da Arizona.</strong></p>
+<a href="#servicos" class="text-link"><span data-i18n="viewServices">Ver serviços</span><span aria-hidden="true">↓</span></a>
+</section>
+
+<section class="services-section" id="servicos" aria-labelledby="services-title">
+<div class="section-heading">
+<div>
+<p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span><span data-i18n="servicesKicker">Tabela de serviços</span></p>
+<h2 id="services-title"><span data-i18n="servicesHeadingFirst">Os serviços são</span><br /><em data-i18n="servicesHeadingSecond">a partir de:</em></h2>
+</div>
+</div>
+<div class="price-layout">
+<div class="service-list" aria-label="Serviços e preços" data-i18n-aria="serviceListLabel">
+<div class="service-row"><span class="service-index" aria-hidden="true">01</span><span class="service-name" data-service-index="0">Corte</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 65,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">02</span><span class="service-name" data-service-index="1">Barba</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 55,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">03</span><span class="service-name" data-service-index="2">Pezinho / Acabamento</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 20,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">04</span><span class="service-name" data-service-index="3">Sobrancelha</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 20,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">05</span><span class="service-name" data-service-index="4">Depilação Nasal</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 20,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">06</span><span class="service-name" data-service-index="5">Depilação Auricular</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 20,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">07</span><span class="service-name" data-service-index="6">Hidratação</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 30,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">08</span><span class="service-name" data-service-index="7">Botox</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 110,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">09</span><span class="service-name" data-service-index="8">Selagem</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 120,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">10</span><span class="service-name" data-service-index="9">Tintura Cabelo</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 60,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">11</span><span class="service-name" data-service-index="10">Tintura Barba</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 40,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">12</span><span class="service-name" data-service-index="11">Luzes</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 140,00</strong></div>
+<div class="service-row"><span class="service-index" aria-hidden="true">13</span><span class="service-name" data-service-index="12">Platinado</span><span class="service-dots" aria-hidden="true"></span><strong class="service-price">R$ 180,00</strong></div>
+<p class="price-note"><span class="note-star" aria-hidden="true">✳</span><span data-i18n="priceNote">Valores conforme a tabela enviada pela Arizona Barbershop.</span></p>
+</div>
+
+<aside class="poster-card">
+<div class="poster-card-heading"><span data-i18n="menuLabel">MENU / AZ</span><span class="poster-card-line" aria-hidden="true"></span><span data-i18n="pricesLabel">PREÇOS</span></div>
+<a class="poster-link" href="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031100044/jfPBSSckvwajTQuu.png" target="_blank" rel="noopener noreferrer" aria-label="Abrir a tabela original de preços em tamanho completo" data-i18n-aria="imageOpenLabel">
+<img src="https://files.manuscdn.com/user_upload_by_module/session_file/310419663031100044/jfPBSSckvwajTQuu.png" alt="Tabela de preços da Arizona Barbershop, com serviços de corte, barba e cuidados pessoais" data-i18n-alt="imageAlt" loading="lazy" />
+<span class="poster-open"><span data-i18n="openImage">Abrir imagem</span><span aria-hidden="true">↗</span></span>
+</a>
+<p class="poster-caption" data-i18n="imageCaption">A tabela original, para você consultar os detalhes.</p>
+</aside>
+</div>
+</section>
+
+<section class="contact-section" id="contato" aria-labelledby="contact-title">
+<div class="contact-copy">
+<p class="eyebrow"><span class="eyebrow-mark" aria-hidden="true"></span><span data-i18n="contactKicker">Seu próximo visual começa aqui</span></p>
+<h2 id="contact-title"><span data-i18n="contactHeadingFirst">Bora cuidar</span><br /><em data-i18n="contactHeadingSecond">do estilo?</em></h2>
+<p data-i18n="contactDescription">Fale com a Arizona pelo WhatsApp para consultar horários. Acompanhe também os cortes e novidades no Instagram.</p>
+<div class="contact-actions">
+<a class="button button-primary js-whatsapp" href="https://wa.me/5585982287134" target="_blank" rel="noopener noreferrer" data-whatsapp-message="whatsappInquiry">
+<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.8a8.2 8.2 0 0 1-12.1 7.1L4 20l1.1-3.9a8.2 8.2 0 1 1 15.1-4.3Z"/><path d="M8.5 8.2c.2-.5.4-.5.7-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3.1.4 0 .6l-.5.6c-.2.2-.3.4-.1.6.2.4.8 1.3 1.7 2 .9.8 1.7 1 2 1.1.3.1.5.1.7-.2l.7-.9c.2-.3.4-.3.7-.2l1.7.8c.3.2.5.2.5.4 0 .2-.1 1.1-.7 1.6-.5.5-1.2.7-1.8.7-.5 0-1.3-.2-2.1-.5-.9-.4-2-.9-3.2-2.1-1.3-1.2-2.1-2.7-2.3-3.2-.3-.6-.5-1.4-.5-2 0-.7.3-1.3.6-1.6Z"/></svg>
+<span data-i18n="whatsappCta">Chamar no WhatsApp</span><span class="button-arrow" aria-hidden="true">↗</span>
+</a>
+<a class="button button-outline" href="https://www.instagram.com/arizona.barbershop" target="_blank" rel="noopener noreferrer">
+<svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle class="ig-dot" cx="17.7" cy="6.7" r="1"/></svg>
+<span data-i18n="followInstagram">Conheça o Instagram</span>
+</a>
+</div>
+</div>
+<div class="contact-side">
+<span class="side-label" data-i18n="contactLabel">CONVERSE COM A ARIZONA</span>
+<a class="phone-link js-whatsapp" href="https://wa.me/5585982287134" target="_blank" rel="noopener noreferrer" data-whatsapp-message="whatsappInquiry">(85) 98228-7134 <span aria-hidden="true">↗</span></a>
+<span class="side-separator" aria-hidden="true"></span>
+<a class="instagram-link" href="https://www.instagram.com/arizona.barbershop" target="_blank" rel="noopener noreferrer">@arizona.barbershop <span aria-hidden="true">↗</span></a>
+</div>
+</section>
+</main>
+
+<footer class="site-footer">
+<a class="brand footer-brand" href="#inicio" aria-label="Arizona Barbershop — voltar ao início" data-i18n-aria="brandReturnLabel">
+<span class="brand-name"><strong>ARIZONA</strong><small>BARBEARIA</small></span>
+</a>
+<p data-i18n="footerSlogan">Seu estilo. Sua marca.</p>
+<span class="footer-copy">© <span id="current-year">2026</span> Arizona Barbershop</span>
+</footer>
+</div>
+
+<div class="mobile-cta" role="group" aria-label="Atalhos de contato" data-i18n-aria="mobileContactsLabel">
+<a class="mobile-cta-wa js-whatsapp" href="https://wa.me/5585982287134" target="_blank" rel="noopener noreferrer" data-whatsapp-message="whatsappInquiry">
+<svg class="wa-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 11.8a8.2 8.2 0 0 1-12.1 7.1L4 20l1.1-3.9a8.2 8.2 0 1 1 15.1-4.3Z"/><path d="M8.5 8.2c.2-.5.4-.5.7-.5h.4c.2 0 .4 0 .5.4l.8 1.8c.1.3.1.4 0 .6l-.5.6c-.2.2-.3.4-.1.6.2.4.8 1.3 1.7 2 .9.8 1.7 1 2 1.1.3.1.5.1.7-.2l.7-.9c.2-.3.4-.3.7-.2l1.7.8c.3.2.5.2.5.4 0 .2-.1 1.1-.7 1.6-.5.5-1.2.7-1.8.7-.5 0-1.3-.2-2.1-.5-.9-.4-2-.9-3.2-2.1-1.3-1.2-2.1-2.7-2.3-3.2-.3-.6-.5-1.4-.5-2 0-.7.3-1.3.6-1.6Z"/></svg>
+<span data-i18n="mobileWhatsApp">WhatsApp</span>
+</a>
+<a class="mobile-cta-ig" href="https://www.instagram.com/arizona.barbershop" target="_blank" rel="noopener noreferrer">
+<svg class="ig-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3.2" y="3.2" width="17.6" height="17.6" rx="5"/><circle cx="12" cy="12" r="4.1"/><circle class="ig-dot" cx="17.7" cy="6.7" r="1"/></svg>
+<span data-i18n="mobileInstagram">Instagram</span>
+</a>
+</div>
+
+<script>
+(() => {
+  const whatsappNumber = "5585982287134";
+  const locales = {
+    "pt-BR": {
+      translations: {
+        title: "Arizona Barbershop | Seu estilo, sua marca",
+        description: "Arizona Barbershop — confira os serviços e valores e fale com a barbearia pelo WhatsApp ou Instagram.",
+        languageLabel: "Idioma", adaptiveMode: "Modo adaptativo", navigationLabel: "Navegação principal",
+        navServices: "Serviços", navAbout: "A Arizona", scheduleAppointment: "Agendar horário",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "Seu estilo.", heroTitleSecond: "Sua marca.",
+        heroDescription: "Corte, barba e cuidado nos detalhes. Encontre o serviço ideal e fale com a Arizona para combinar seu atendimento.",
+        whatsappCta: "Chamar no WhatsApp", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "Sobre a Arizona Barbershop", introFirst: "Um bom visual começa no detalhe.",
+        introSecond: "Descubra os serviços da Arizona.", viewServices: "Ver serviços",
+        servicesKicker: "Tabela de serviços", servicesHeadingFirst: "Os serviços são", servicesHeadingSecond: "a partir de:",
+        serviceListLabel: "Serviços e preços",
+        priceNote: "Valores conforme a tabela enviada pela Arizona Barbershop.",
+        menuLabel: "MENU / AZ", pricesLabel: "PREÇOS", openImage: "Abrir imagem",
+        imageOpenLabel: "Abrir a tabela original de preços em tamanho completo",
+        imageAlt: "Tabela de preços da Arizona Barbershop, com serviços de corte, barba e cuidados pessoais",
+        imageCaption: "A tabela original, para você consultar os detalhes.",
+        contactKicker: "Seu próximo visual começa aqui", contactHeadingFirst: "Bora cuidar",
+        contactHeadingSecond: "do estilo?",
+        contactDescription: "Fale com a Arizona pelo WhatsApp para consultar horários. Acompanhe também os cortes e novidades no Instagram.",
+        followInstagram: "Conheça o Instagram", contactLabel: "CONVERSE COM A ARIZONA",
+        footerSlogan: "Seu estilo. Sua marca.",
+        brandHomeLabel: "Arizona Barbershop — início", brandReturnLabel: "Arizona Barbershop — voltar ao início",
+        mobileContactsLabel: "Atalhos de contato", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "Olá, Arizona Barbershop! Gostaria de consultar horários."
+      },
+      services: ["Corte","Barba","Pezinho / Acabamento","Sobrancelha","Depilação Nasal","Depilação Auricular","Hidratação","Botox","Selagem","Tintura Cabelo","Tintura Barba","Luzes","Platinado"]
+    },
+    "pt-PT": {
+      translations: {
+        title: "Arizona Barbershop | O seu estilo, a sua marca",
+        description: "Arizona Barbershop — consulte os serviços e preços e fale com a barbearia pelo WhatsApp ou Instagram.",
+        languageLabel: "Idioma", adaptiveMode: "Modo adaptativo", navigationLabel: "Navegação principal",
+        navServices: "Serviços", navAbout: "A Arizona", scheduleAppointment: "Marcar atendimento",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "O seu estilo.", heroTitleSecond: "A sua marca.",
+        heroDescription: "Corte de cabelo, barba e atenção aos detalhes. Encontre o serviço ideal e fale com a Arizona para marcar o seu atendimento.",
+        whatsappCta: "Contactar pelo WhatsApp", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "Sobre a Arizona Barbershop", introFirst: "Um bom visual começa nos detalhes.",
+        introSecond: "Descubra os serviços da Arizona.", viewServices: "Ver serviços",
+        servicesKicker: "Tabela de serviços", servicesHeadingFirst: "Serviços", servicesHeadingSecond: "a partir de:",
+        serviceListLabel: "Serviços e preços",
+        priceNote: "Preços conforme a tabela enviada pela Arizona Barbershop.",
+        menuLabel: "MENU / AZ", pricesLabel: "PREÇOS", openImage: "Abrir imagem",
+        imageOpenLabel: "Abrir a tabela de preços original em tamanho completo",
+        imageAlt: "Tabela de preços da Arizona Barbershop, com serviços de corte de cabelo, barba e cuidados pessoais",
+        imageCaption: "A tabela original, para consultar todos os detalhes.",
+        contactKicker: "O seu próximo visual começa aqui", contactHeadingFirst: "Vamos cuidar",
+        contactHeadingSecond: "do seu estilo?",
+        contactDescription: "Fale com a Arizona pelo WhatsApp para consultar disponibilidades. Acompanhe também os cortes e as novidades no Instagram.",
+        followInstagram: "Conheça o Instagram", contactLabel: "FALE COM A ARIZONA",
+        footerSlogan: "O seu estilo. A sua marca.",
+        brandHomeLabel: "Arizona Barbershop — início", brandReturnLabel: "Arizona Barbershop — voltar ao início",
+        mobileContactsLabel: "Atalhos de contacto", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "Olá, Arizona Barbershop! Gostaria de consultar disponibilidades."
+      },
+      services: ["Corte de cabelo","Barba","Contornos / acabamento","Design de sobrancelhas","Depilação do nariz","Depilação das orelhas","Hidratação","Botox capilar","Selagem capilar","Coloração do cabelo","Coloração da barba","Madeixas","Descoloração para tom platinado"]
+    },
+    en: {
+      translations: {
+        title: "Arizona Barbershop | Your style, your signature",
+        description: "Arizona Barbershop — check out our services and prices, and get in touch via WhatsApp or Instagram.",
+        languageLabel: "Language", adaptiveMode: "Adaptive mode", navigationLabel: "Main navigation",
+        navServices: "Services", navAbout: "About Arizona", scheduleAppointment: "Book an appointment",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "Your style.", heroTitleSecond: "Your signature.",
+        heroDescription: "Haircuts, beard trims, and attention to every detail. Find the right service and contact Arizona to arrange your appointment.",
+        whatsappCta: "Message us on WhatsApp", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "About Arizona Barbershop", introFirst: "A great look starts with the details.",
+        introSecond: "Discover Arizona’s services.", viewServices: "View services",
+        servicesKicker: "Service menu", servicesHeadingFirst: "Services start", servicesHeadingSecond: "at:",
+        serviceListLabel: "Services and prices",
+        priceNote: "Prices as listed in the menu provided by Arizona Barbershop.",
+        menuLabel: "MENU / AZ", pricesLabel: "PRICES", openImage: "Open image",
+        imageOpenLabel: "Open the original price list at full size",
+        imageAlt: "Arizona Barbershop price list, featuring haircut, beard, and personal care services",
+        imageCaption: "The original price list, so you can check all the details.",
+        contactKicker: "Your next look starts here", contactHeadingFirst: "Ready to",
+        contactHeadingSecond: "freshen up your style?",
+        contactDescription: "Message Arizona on WhatsApp to check availability. Follow us on Instagram for the latest cuts and news.",
+        followInstagram: "Explore our Instagram", contactLabel: "GET IN TOUCH WITH ARIZONA",
+        footerSlogan: "Your style. Your signature.",
+        brandHomeLabel: "Arizona Barbershop — home", brandReturnLabel: "Arizona Barbershop — back to home",
+        mobileContactsLabel: "Quick contact links", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "Hi, Arizona Barbershop! I’d like to check your availability."
+      },
+      services: ["Haircut","Beard trim","Hairline lineup / Edge-up","Eyebrow shaping","Nose hair removal","Ear hair removal","Hair hydration treatment","Hair Botox","Hair smoothing treatment","Hair color","Beard color","Highlights","Platinum bleach"]
+    },
+    es: {
+      translations: {
+        title: "Arizona Barbershop | Tu estilo, tu marca",
+        description: "Arizona Barbershop — consulta los servicios y precios y contacta con la barbería por WhatsApp o Instagram.",
+        languageLabel: "Idioma", adaptiveMode: "Modo adaptable", navigationLabel: "Navegación principal",
+        navServices: "Servicios", navAbout: "Arizona", scheduleAppointment: "Reservar cita",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "Tu estilo.", heroTitleSecond: "Tu marca.",
+        heroDescription: "Corte, barba y cuidado al detalle. Encuentra el servicio ideal y contacta con Arizona para coordinar tu atención.",
+        whatsappCta: "Contactar por WhatsApp", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "Sobre Arizona Barbershop", introFirst: "Un buen look empieza en los detalles.",
+        introSecond: "Descubre los servicios de Arizona.", viewServices: "Ver servicios",
+        servicesKicker: "Lista de servicios", servicesHeadingFirst: "Los servicios están", servicesHeadingSecond: "desde:",
+        serviceListLabel: "Servicios y precios",
+        priceNote: "Precios según la lista enviada por Arizona Barbershop.",
+        menuLabel: "MENÚ / AZ", pricesLabel: "PRECIOS", openImage: "Abrir imagen",
+        imageOpenLabel: "Abrir la lista original de precios en tamaño completo",
+        imageAlt: "Lista de precios de Arizona Barbershop, con servicios de corte, barba y cuidado personal",
+        imageCaption: "La lista original para que consultes los detalles.",
+        contactKicker: "Tu próximo look empieza aquí", contactHeadingFirst: "¿Nos ocupamos",
+        contactHeadingSecond: "de tu estilo?",
+        contactDescription: "Contacta con Arizona por WhatsApp para consultar horarios. También puedes seguir los cortes y las novedades en Instagram.",
+        followInstagram: "Conoce el Instagram", contactLabel: "HABLA CON ARIZONA",
+        footerSlogan: "Tu estilo. Tu marca.",
+        brandHomeLabel: "Arizona Barbershop — inicio", brandReturnLabel: "Arizona Barbershop — volver al inicio",
+        mobileContactsLabel: "Accesos directos de contacto", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "¡Hola, Arizona Barbershop! Me gustaría consultar los horarios."
+      },
+      services: ["Corte de cabello","Barba","Perfilado de línea del cabello","Diseño de cejas","Depilación nasal","Depilación de orejas","Hidratación","Botox capilar","Sellado capilar","Tinte de cabello","Tinte de barba","Mechas","Decoloración a tono platino"]
+    },
+    "zh-CN": {
+      translations: {
+        title: "Arizona Barbershop | 你的风格，你的标志",
+        description: "Arizona Barbershop——查看服务项目和价格，并通过 WhatsApp 或 Instagram 联系理发店。",
+        languageLabel: "语言", adaptiveMode: "自适应模式", navigationLabel: "主导航",
+        navServices: "服务项目", navAbout: "关于 Arizona", scheduleAppointment: "预约",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "你的风格。", heroTitleSecond: "你的标志。",
+        heroDescription: "理发、修胡子，还有细节护理。找到适合你的服务，联系 Arizona 预约。",
+        whatsappCta: "通过 WhatsApp 联系", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "关于 Arizona Barbershop", introFirst: "好造型，始于细节。",
+        introSecond: "了解 Arizona 的服务项目。", viewServices: "查看服务",
+        servicesKicker: "服务价格表", servicesHeadingFirst: "服务价格", servicesHeadingSecond: "起价如下：",
+        serviceListLabel: "服务与价格",
+        priceNote: "价格以 Arizona Barbershop 提供的价目表为准。",
+        menuLabel: "菜单 / AZ", pricesLabel: "价格", openImage: "打开图片",
+        imageOpenLabel: "打开完整尺寸的原始价目表",
+        imageAlt: "Arizona Barbershop 价目表，包含理发、胡须护理和个人护理服务",
+        imageCaption: "查看原始价目表，了解详情。",
+        contactKicker: "从这里开启你的下一款造型", contactHeadingFirst: "来打理",
+        contactHeadingSecond: "一下造型？",
+        contactDescription: "通过 WhatsApp 联系 Arizona，咨询可预约时段。也欢迎在 Instagram 关注发型作品和最新动态。",
+        followInstagram: "了解 Instagram", contactLabel: "联系 ARIZONA",
+        footerSlogan: "你的风格。你的标志。",
+        brandHomeLabel: "Arizona Barbershop — 首页", brandReturnLabel: "Arizona Barbershop — 返回首页",
+        mobileContactsLabel: "联系快捷方式", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "你好，Arizona Barbershop！我想咨询可预约时段。"
+      },
+      services: ["理发","胡须修剪","发际线修整","修眉","鼻毛清理","耳毛清理","头发护理","头发肉毒护理","头发封层护理","染发","胡须染色","挑染","漂染成铂金色"]
+    },
+    fr: {
+      translations: {
+        title: "Arizona Barbershop | Votre style. Votre signature.",
+        description: "Arizona Barbershop — découvrez les services et les tarifs, et contactez le salon sur WhatsApp ou Instagram.",
+        languageLabel: "Langue", adaptiveMode: "Mode adaptatif", navigationLabel: "Navigation principale",
+        navServices: "Services", navAbout: "Arizona", scheduleAppointment: "Prendre rendez-vous",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "Votre style.", heroTitleSecond: "Votre signature.",
+        heroDescription: "Coupe, barbe et soin du détail. Trouvez le service qui vous convient et contactez Arizona pour organiser votre rendez-vous.",
+        whatsappCta: "Contacter sur WhatsApp", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "À propos d’Arizona Barbershop", introFirst: "Un beau look commence dans le détail.",
+        introSecond: "Découvrez les services d’Arizona.", viewServices: "Voir les services",
+        servicesKicker: "Grille des tarifs", servicesHeadingFirst: "Les prestations sont proposées", servicesHeadingSecond: "à partir de :",
+        serviceListLabel: "Services et tarifs",
+        priceNote: "Tarifs selon la grille communiquée par Arizona Barbershop.",
+        menuLabel: "MENU / AZ", pricesLabel: "TARIFS", openImage: "Ouvrir l’image",
+        imageOpenLabel: "Ouvrir la grille tarifaire originale en taille réelle",
+        imageAlt: "Grille tarifaire d’Arizona Barbershop : coupes, barbes et soins personnels",
+        imageCaption: "La grille originale pour consulter tous les détails.",
+        contactKicker: "Votre prochain look commence ici", contactHeadingFirst: "Envie de prendre",
+        contactHeadingSecond: "soin de votre style ?",
+        contactDescription: "Contactez Arizona sur WhatsApp pour connaître les disponibilités. Retrouvez aussi les coupes et les nouveautés sur Instagram.",
+        followInstagram: "Découvrir l’Instagram", contactLabel: "CONTACTEZ ARIZONA",
+        footerSlogan: "Votre style. Votre signature.",
+        brandHomeLabel: "Arizona Barbershop — accueil", brandReturnLabel: "Arizona Barbershop — retour à l’accueil",
+        mobileContactsLabel: "Raccourcis de contact", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "Bonjour, Arizona Barbershop ! Je souhaiterais connaître vos disponibilités."
+      },
+      services: ["Coupe de cheveux","Barbe","Contour / finition","Design des sourcils","Épilation du nez","Épilation des oreilles","Soin hydratant","Botox capillaire","Lissage capillaire","Coloration des cheveux","Coloration de la barbe","Mèches","Décoloration platine"]
+    },
+    ru: {
+      translations: {
+        title: "Arizona Barbershop | Твой стиль. Твоя индивидуальность.",
+        description: "Arizona Barbershop — посмотрите услуги и цены и свяжитесь с барбершопом через WhatsApp или Instagram.",
+        languageLabel: "Язык", adaptiveMode: "Адаптивный режим", navigationLabel: "Главная навигация",
+        navServices: "Услуги", navAbout: "О Arizona", scheduleAppointment: "Записаться",
+        heroKicker: "Arizona Barbershop", heroTitleFirst: "Твой стиль.", heroTitleSecond: "Твоя индивидуальность.",
+        heroDescription: "Стрижка, борода и внимание к деталям. Выберите подходящую услугу и свяжитесь с Arizona, чтобы договориться о визите.",
+        whatsappCta: "Написать в WhatsApp", instagramHandle: "@arizona.barbershop",
+        introSectionLabel: "О барбершопе Arizona Barbershop", introFirst: "Хороший образ начинается с деталей.",
+        introSecond: "Откройте для себя услуги Arizona.", viewServices: "Посмотреть услуги",
+        servicesKicker: "Прайс-лист", servicesHeadingFirst: "Услуги", servicesHeadingSecond: "от:",
+        serviceListLabel: "Услуги и цены",
+        priceNote: "Цены указаны согласно прайс-листу Arizona Barbershop.",
+        menuLabel: "МЕНЮ / AZ", pricesLabel: "ЦЕНЫ", openImage: "Открыть изображение",
+        imageOpenLabel: "Открыть оригинальный прайс-лист в полном размере",
+        imageAlt: "Прайс-лист Arizona Barbershop с услугами стрижки, ухода за бородой и личного ухода",
+        imageCaption: "Оригинальный прайс-лист с подробной информацией.",
+        contactKicker: "Твой новый образ начинается здесь", contactHeadingFirst: "Пора позаботиться",
+        contactHeadingSecond: "о стиле?",
+        contactDescription: "Напишите в Arizona через WhatsApp, чтобы узнать о свободном времени. Следите за стрижками и новостями в Instagram.",
+        followInstagram: "Узнать об Instagram", contactLabel: "НАПИШИТЕ В ARIZONA",
+        footerSlogan: "Твой стиль. Твоя индивидуальность.",
+        brandHomeLabel: "Arizona Barbershop — главная", brandReturnLabel: "Arizona Barbershop — вернуться на главную",
+        mobileContactsLabel: "Быстрые контакты", mobileWhatsApp: "WhatsApp", mobileInstagram: "Instagram",
+        whatsappInquiry: "Здравствуйте, Arizona Barbershop! Хотел(а) бы узнать о свободном времени."
+      },
+      services: ["Стрижка","Борода","Оформление линии роста волос","Оформление бровей","Удаление волос в носу","Удаление волос в ушах","Увлажнение волос","Ботокс для волос","Запечатывание волос","Окрашивание волос","Окрашивание бороды","Мелирование","Осветление до платинового оттенка"]
+    }
+  };
+
+  const languageButton = document.getElementById("language-button");
+  const languageMenu = document.getElementById("language-menu");
+  const languageSwitcher = document.getElementById("language-switcher");
+  const languageCurrentName = document.getElementById("language-current-name");
+  const languageCurrentFlag = document.getElementById("language-current-flag");
+  const languageOptions = Array.from(document.querySelectorAll("[data-locale]"));
+  const localeNames = {
+    "pt-BR": { label: "Português (Brasil)", flag: "🇧🇷" },
+    "pt-PT": { label: "Português (Portugal)", flag: "🇵🇹" },
+    en: { label: "English", flag: "🇬🇧" },
+    es: { label: "Español", flag: "🇪🇸" },
+    "zh-CN": { label: "中文（简体）", flag: "🇨🇳" },
+    fr: { label: "Français", flag: "🇫🇷" },
+    ru: { label: "Русский", flag: "🇷🇺" }
+  };
+  const accessibilityToggle = document.getElementById("accessibility-toggle");
+  const pageTitle = document.querySelector("title");
+  const pageDescription = document.querySelector('meta[name="description"]');
+  const year = document.getElementById("current-year");
+
+  function applyLanguage(locale) {
+    const language = locales[locale] ? locale : "pt-BR";
+    const { translations, services } = locales[language];
+    document.documentElement.lang = language;
+    if (pageTitle) pageTitle.textContent = translations.title;
+    if (pageDescription) pageDescription.setAttribute("content", translations.description);
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.dataset.i18n;
+      if (translations[key]) el.textContent = translations[key];
+    });
+    document.querySelectorAll("[data-i18n-aria]").forEach((el) => {
+      const key = el.dataset.i18nAria;
+      if (translations[key]) el.setAttribute("aria-label", translations[key]);
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.dataset.i18nAlt;
+      if (translations[key]) el.setAttribute("alt", translations[key]);
+    });
+    document.querySelectorAll("[data-i18n-content]").forEach((el) => {
+      const key = el.dataset.i18nContent;
+      if (translations[key]) el.setAttribute("content", translations[key]);
+    });
+    document.querySelectorAll("[data-service-index]").forEach((el) => {
+      const index = Number(el.dataset.serviceIndex);
+      const serviceName = services[index];
+      if (!serviceName) return;
+      if (el.classList.contains("service-name")) el.textContent = serviceName;
+    });
+    document.querySelectorAll(".js-whatsapp").forEach((link) => {
+      const messageKey = link.dataset.whatsappMessage || "whatsappInquiry";
+      const message = translations[messageKey] || translations.whatsappInquiry;
+      link.href = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+    });
+    const selected = localeNames[language];
+    if (selected) {
+      if (languageCurrentName) languageCurrentName.textContent = selected.label;
+      if (languageCurrentFlag) languageCurrentFlag.textContent = selected.flag;
+      if (languageButton) languageButton.setAttribute("aria-label", `${translations.languageLabel}: ${selected.label}`);
+    }
+    languageOptions.forEach((opt) => opt.setAttribute("aria-pressed", String(opt.dataset.locale === language)));
+  }
+
+  function closeLanguageMenu(restoreFocus = false) {
+    if (!languageButton || !languageMenu) return;
+    languageButton.setAttribute("aria-expanded", "false");
+    languageMenu.hidden = true;
+    if (restoreFocus) languageButton.focus();
+  }
+
+  if (languageButton && languageMenu) {
+    languageButton.addEventListener("click", () => {
+      const open = languageButton.getAttribute("aria-expanded") !== "true";
+      languageButton.setAttribute("aria-expanded", String(open));
+      languageMenu.hidden = !open;
+    });
+    languageButton.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowDown" && languageMenu.hidden) {
+        e.preventDefault();
+        languageButton.setAttribute("aria-expanded", "true");
+        languageMenu.hidden = false;
+        languageOptions[0]?.focus();
+      }
+    });
+    languageMenu.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") { e.preventDefault(); closeLanguageMenu(true); }
+    });
+    languageOptions.forEach((opt) => {
+      opt.addEventListener("click", () => {
+        applyLanguage(opt.dataset.locale);
+        closeLanguageMenu(true);
+      });
+    });
+    document.addEventListener("click", (e) => {
+      if (languageSwitcher && !languageSwitcher.contains(e.target)) closeLanguageMenu();
+    });
+  }
+
+  if (accessibilityToggle) {
+    accessibilityToggle.addEventListener("click", () => {
+      const active = accessibilityToggle.getAttribute("aria-pressed") !== "true";
+      accessibilityToggle.setAttribute("aria-pressed", String(active));
+      document.body.classList.toggle("accessibility-mode", active);
+    });
+  }
+
+  if (year) year.textContent = new Date().getFullYear();
+  applyLanguage("pt-BR");
+})();
+</script>
+</body>
+</html>
